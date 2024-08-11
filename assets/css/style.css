@@ -1,0 +1,184 @@
+@import url(https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --gray: #1E1E1E;
+    --pink: #FFD4D4;
+    --white: #FFFFFF;
+    --purple: #C29FEE;
+    --yellow: #DAC693;
+    --white-gray: #3A3A3A;
+}
+
+/* Cores */
+.white {
+    color: var(--white);
+}
+.gray{
+    color: var(--gray);
+}
+.pink {
+    color: var(--pink);
+}
+.purple {
+    color: var(--purple);
+}
+.yellow {
+    color: var(--yellow);
+}
+
+.bg-white{
+    background-color: var(--white);
+}
+.bg-gray {
+    background-color: var(--gray);
+}
+.bg-pink {
+    background-color: var(--pink);
+}
+.bg-purple {
+    background-color: var(--purple);
+}
+.bg-yellow{
+    background-color: var(--yellow);
+}
+.bg-white-gray {
+    background-color: var(--white-gray);
+}
+
+/* Tags */
+nav {
+    width: 40vw;
+}
+header{
+    position: relative;
+    z-index: 999;
+}
+.div-width {
+    width: 50vw;
+}
+.text-width {
+    width: 40vw;
+}
+.plan-width {
+    width: 15vw;
+}
+
+/* Tamanhos e outros padrões de texto */
+.text-nav{
+    font-size: 20px;
+    transition: ease 0.22s;
+    cursor: pointer;
+}
+.text-nav:hover{
+    color: var(--white);
+}
+.text-m{
+    font-size: 24px;
+    font-weight: 200;
+}
+.text-p{
+    font-size: 20px;
+    font-weight: 200;
+}
+.text-button{
+    font-size: 26px;
+}
+.title{
+    font-size: 48px;
+}
+.bold{
+    font-weight: 800;
+}.a-start {
+    align-items: flex-start;
+}
+
+/* Imagens */
+.logo {
+    width: 261px;
+    height: 73px;
+}
+.logo-mini {
+    width: 125px;
+    height: 35px;
+}
+.headset-img{
+    width: 506px;
+    height: 631px;
+}
+.icon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+/* Display flex */
+.d-flex{
+    display: flex;
+}
+.column{
+    flex-direction: column;
+}
+.s-between{
+    justify-content: space-between;
+}
+.s-around {
+    justify-content: space-between;
+}
+.center {
+    justify-content: center;
+    align-items: center;
+}
+.a-center{
+    align-items: center;
+}
+.j-content{
+    justify-content: center;
+}
+.gap-sec{
+    gap: 35px;
+}
+.gap-m{
+    gap: 25px;
+}
+.gap-p{
+    gap: 20px;
+}
+
+
+/* Margins e paddings */
+.padding-header {
+    padding: 25px 100px;
+}
+.padding-footer {
+    padding: 50px 0;
+}
+.padding-sec {
+    padding: 60px 0;
+}
+.plan-div{
+    padding: 30px 50px;
+    border-radius: 20px;
+}
+
+/* Botão */
+.button {
+    padding: 10px 20px;
+    border-radius: 70px;
+    cursor: pointer;
+    transition: ease 0.4s;
+}
+.button:hover{
+    scale: 1.1;
+}
+
+/* Sombras */
+.nav-shadow{
+    box-shadow: 0px 16px 60px var(--pink);
+}

@@ -160,7 +160,7 @@ header{
     padding: 50px 0;
 }
 .padding-sec {
-    padding: 60px 0;
+    padding: 70px 0;
 }
 .plan-div{
     padding: 30px 50px;
@@ -180,5 +180,5 @@ header{
 
 /* Sombras */
 .nav-shadow{
-    box-shadow: 0px 16px 60px var(--pink);
+    box-shadow: 0px 0px 60px var(--pink);
 }

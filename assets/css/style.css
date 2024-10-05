@@ -101,20 +101,6 @@ header {
         & p {
             font-weight: bold;
         }
-        & button {
-            cursor: pointer;
-            font-size: 1.3rem;
-            padding: 8px 15px;
-            border-radius: 30px;
-            border: none;
-            background-color: var(--pink);
-            color: #1E1E1E;
-            font-weight: bold;
-            transition: 0.2s;
-            &:hover {
-                scale: 1.1;
-            }
-        }
     }
 }
 
@@ -140,24 +126,25 @@ header {
         & div {
             display: flex;
             gap: 20px;
-            & button {
-                cursor: pointer;
-                padding: 7px 15px;
-                color: var(--gray);
-                font-weight: bold;
-                font-size: 1.1rem;
-                border: none;
-                border-radius: 30px;
-                transition: 0.2s;
-                &:hover {
-                    scale: 1.08;
-                }
-            }
         } 
     }
     & img {
         width: 420px;
         height: auto;
+    }
+}
+
+button {
+    cursor: pointer;
+    padding: 7px 15px;
+    color: var(--gray);
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    transition: 0.2s;
+    &:hover {
+        scale: 1.06 ;
     }
 }
 
@@ -174,10 +161,10 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
     & .div-planos {
         display: flex;
-        gap: 70px;
+        gap: 40px;
     }
 }
 
@@ -205,7 +192,7 @@ header {
     flex-direction: column;
     gap: 30px;
     align-items: center;
-    padding: 40px 20px;
+    padding: 40px 10px;
     border-radius: 20px;
     transition: 0.1s;
     &:hover {
@@ -215,7 +202,7 @@ header {
         display: flex;
         align-self: center;
         font-weight: 200;
-        width: 250px;
+        width: 230px;
         color: var(--white);
         font-size: 1rem;
     }
@@ -235,19 +222,6 @@ header {
             font-weight: 200;
             font-size: 1rem;
             color: var(--white);
-        }
-    }
-    & button {
-        border: none;
-        padding: 7px 15px;
-        font-size: 1rem;
-        color: var(--gray);
-        font-weight: bold;
-        border-radius: 30px;
-        transition: 0.2s;
-        cursor: pointer;
-        &:hover {
-            scale: 1.07;
         }
     }
 }
@@ -282,7 +256,7 @@ header {
 
 .div-faq{
     user-select: none;
-    width: 700px;
+    width: 600px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -321,7 +295,7 @@ header {
 }
 
 footer {
-    padding: 50px 0;
+    padding: 30px 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -336,14 +310,14 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 30px;
+        gap: 25px;
         & i {
             cursor: pointer;
             color: var(--gray);
             width: 30px;
             height: auto;
             transition: 0.2s;
-            font-size: 2rem;
+            font-size: 2.3rem;
             &:hover{
                 scale: 1.1;
             }

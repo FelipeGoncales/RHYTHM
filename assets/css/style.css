@@ -5,7 +5,9 @@
     padding: 0;
     text-decoration: none;
     font-family: "Roboto", sans-serif;
-    box-sizing: border-box;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
 }
 
 :root {
@@ -20,15 +22,235 @@
 body {
     background-color: var(--gray);
     scroll-behavior: smooth;
+    margin-top: 75px;
+    font-size: 20px;
 }
 
-/* Cores */
-.white {
-    color: var(--white);
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding: 90px 0;
+    box-sizing: border-box;
 }
-.gray{
+
+header {
+    top: 0;
+    position: fixed;
+    z-index: 999;
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--pink);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 50px;
+    & img {
+        height: 50px;
+        width: auto;
+    }
+    & nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        & a {
+            color: var(--gray);
+            transition: 0.2s;
+            font-size: 1rem;
+            &:hover {
+                color: var(--white);
+            }
+        }
+    }
+    & .btn-login {
+        padding: 7px 17px;
+        font-weight: bold;
+        background-color: var(--gray);
+        color: var(--white) !important;
+        border-radius: 30px;
+        transition: 0.2s;
+        &:hover {
+            scale: 1.1;
+        }
+    }
+}
+
+.sec-sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    & h1 {
+        color: var(--white);
+        font-size: 2.2rem;
+    }
+    & p {
+        color: var(--white);
+        font-weight: 200;
+        font-size: 1.2rem;
+    }
+    & div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        & p {
+            font-weight: bold;
+        }
+        & button {
+            cursor: pointer;
+            font-size: 1.3rem;
+            padding: 8px 15px;
+            border-radius: 30px;
+            border: none;
+            background-color: var(--pink);
+            color: #1E1E1E;
+            font-weight: bold;
+            transition: 0.2s;
+            &:hover {
+                scale: 1.1;
+            }
+        }
+    }
+}
+
+.sec-propaganda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & .container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 700px;
+        & h2 {
+            color: var(--white);
+            font-size: 2.2rem;
+        }
+        & p {
+            color: var(--white);
+            font-size: 1.1rem;
+            font-weight: 200;
+            width: 550px;
+        }
+        & div {
+            display: flex;
+            gap: 20px;
+            & button {
+                cursor: pointer;
+                padding: 7px 15px;
+                color: var(--gray);
+                font-weight: bold;
+                font-size: 1.1rem;
+                border: none;
+                border-radius: 30px;
+                transition: 0.2s;
+                &:hover {
+                    scale: 1.08;
+                }
+            }
+        } 
+    }
+    & img {
+        width: 420px;
+        height: auto;
+    }
+}
+
+.botao-pink {
+    background-color: var(--pink);
+}
+.botao-white {
+    background-color: var(--white);
     color: var(--gray);
 }
+
+.sec-planos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    & .div-planos {
+        display: flex;
+        gap: 70px;
+    }
+}
+
+.div-title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    & h2,h3 {
+        font-size: 2.2rem;
+        color: var(--white);
+    }
+    & p {
+        color: var(--white);
+        font-size: 1.2rem;
+        font-weight: 200;
+    }
+}
+
+.plano {
+    width: 300px;
+    background-color: var(--white-gray);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 40px 20px;
+    border-radius: 20px;
+    transition: 0.1s;
+    &:hover {
+        background-color: #535353;
+    }
+    & .topicos {
+        display: flex;
+        align-self: center;
+        font-weight: 200;
+        width: 250px;
+        color: var(--white);
+        font-size: 1rem;
+    }
+    & div {
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 5px;
+        & h3 {
+            display: flex;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        & p {
+            font-weight: 200;
+            font-size: 1rem;
+            color: var(--white);
+        }
+    }
+    & button {
+        border: none;
+        padding: 7px 15px;
+        font-size: 1rem;
+        color: var(--gray);
+        font-weight: bold;
+        border-radius: 30px;
+        transition: 0.2s;
+        cursor: pointer;
+        &:hover {
+            scale: 1.07;
+        }
+    }
+}
+
 .pink {
     color: var(--pink);
 }
@@ -39,346 +261,95 @@ body {
     color: var(--yellow);
 }
 
-.bg-white{
-    background-color: var(--white);
-}
-.bg-gray {
-    background-color: var(--gray);
-}
 .bg-pink {
     background-color: var(--pink);
 }
-.bg-purple {
+.bg-purple{
     background-color: var(--purple);
 }
-.bg-yellow{
+.bg-yellow {
     background-color: var(--yellow);
 }
-.bg-white-gray {
-    background-color: var(--white-gray);
-}
 
-/* Tags */
-nav {
-    width: 40vw;
-}
-header{
-    position: relative;
-    z-index: 999;
-    width: 100%;
-}
-.div-width {
-    width: 50vw;
-}
-.text-width {
-    width: 40vw;
-}
-.plan-width {
-    width: 15vw;
-}
-
-/* Tamanhos e outros padrões de texto */
-.text-nav{
-    font-size: 20px;
-    transition: ease 0.3s;
-    cursor: pointer;
-}
-.text-nav:hover{
-    color: var(--white);
-}
-.text-m{
-    font-size: 24px;
-    font-weight: 200;
-}
-.text-p{
-    font-size: 20px;
-    font-weight: 200;
-}
-.text-button{
-    font-size: 26px;
-}
-.title{
-    font-size: 48px;
-}
-.bold{
-    font-weight: 800;
-}.a-start {
-    align-items: flex-start;
-}
-.t-align {
-    text-align: center;
-}
-
-/* Imagens */
-.logo {
-    width: 261px;
-    height: 73px;
-}
-.logo-mini {
-    width: 125px;
-    height: 35px;
-}
-.headset-img{
-    width: 506px;
-    height: 631px;
-}
-.icon {
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
-    transition: scale 0.4s ease;
-}
-.icon:hover{
-    scale: 1.15;
-}
-
-/* Display flex */
-.d-flex{
+.sec-faq {
     display: flex;
-}
-.column{
     flex-direction: column;
-}
-.s-between{
-    justify-content: space-between;
-}
-.s-around {
-    justify-content: space-between;
-}
-.center {
-    justify-content: center;
     align-items: center;
-}
-.a-center{
-    align-items: center;
-}
-.j-content{
     justify-content: center;
+    gap: 30px;
 }
-.gap-sec{
-    gap: 35px;
-}
-.gap-m{
-    gap: 25px;
-}
-.gap-p{
+
+.div-faq{
+    user-select: none;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-}
-.gap-pp{
-    gap: 10px;
-}
-.gap-body{
-    gap: 100px;
-}
-
-/* Margins e paddings */
-.padding-header {
-    padding: 25px 100px;
-}
-.padding-footer {
-    padding: 50px 0;
-}
-.padding-sec {
-    padding: 70px 0;
-}
-.plan-div{
-    width: 22vw;  
-    padding: 30px 50px;
-    border-radius: 20px;
-    transition: scale 0.3s ease;
-}
-.plan-div:hover{
-    scale: 1.05;
-}
-
-/* Botão */
-.button {
-    padding: 10px 20px;
-    border-radius: 70px;
-    cursor: pointer;
-    transition: ease 0.4s;
-}
-.button:hover{
-    scale: 1.1;
+    & .div-faqzinha {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        & p {
+            font-size: 1.3rem;
+            color: var(--white);
+            font-weight: bold;
+        }
+        & i {
+            font-size: 1.3rem;
+            color: var(--white);
+        }
+    }
+    & .div-text {
+        display: none;
+        & p {
+            font-size: 1rem;
+            color: var(--white);
+            font-weight: 200;
+            line-height: 1.7rem;
+        }
+    }
 }
 
-/* Sombras */
-.nav-shadow{
-    box-shadow: 0px 0px 60px var(--pink);
-}
-
-/* FAQ */
-.faq-width {
-    width: 45vw;
-    cursor: pointer;
-}
-.border-bottom{
-    border-bottom: 0.1rem solid white;
-}
-.text-space {
-    letter-spacing: 0.5px;
-    line-height: 1.8rem;
-    padding-bottom: 1rem;
-}
-.t-justify{
-    text-align: justify;
-}
-.answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-}
-
-.faq.active .answer {
-    max-height: 500px;
-}
-.icon-seta{
-    transition: transform 0.5s ease;
-}
-.faq.active .icon-seta{
-    transform: rotate(180deg);
-}
-footer{
+.linha {
     width: 100%;
+    height: 1px;
+    border-radius: 30px;
+    background-color: var(--white);
 }
 
-
-/* Responsivo */
-@media (max-width: 1459px) {
-    .plan-div {
-        width: 25vw;
-    }
-}
-@media (max-width: 1024px) {
-    .plan-div {
-        width: 28vw;
-    }
-    .headset-img {
-        width: 40vw;
-        height: auto;
-    }
-}
-@media (max-width: 768px) {
-    .d-flex {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .gap-body {
-        gap: 80px;
-    }
-    section {
-        padding: 0 5vw;
-    }
-    .padding-footer {
-        padding: 5 10vw;
-    }
-    .center{
-        align-items: center;
-        justify-self: center
-    }
-    .headset-img {
-        width: 60vw;
-        height: auto;
-        position: relative;
-        right: -0.8rem;
-        padding-top: 1rem;
-    }
-    p, h1, h2, h3 {
-        text-align: center;
-    }
-    .title {
-        font-size: 48px;
-    }
-    .text-nav {
-        font-size: 30px;
+footer {
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--pink);
+    & img {
         width: auto;
+        height: 50px;
     }
-    .gap-nav {
-        gap: 25px;
-    }
-    .faq-width {
-        width: 80vw;
-        justify-content: space-between;
-    }
-    .div-icons {
-        flex-direction: row;
-    }
-    .div-question {
-        flex-direction: row;
-    }
-    .question {
-        text-align: start;
-        width: 80vw;
-    }
-    .plan-width {
-        width: 40vw;
-        text-align: center;
-    }
-    .icon-seta {
-        width: 30px;
-        height: 30px;
-    }
-    .t-justify {
-        text-align: left;
-    }
-    .div-width, .text-width {
-        width: 90vw;
-    }
-    body {
-        align-items: center;
+    & div {
+        display: flex;
         justify-content: center;
+        align-items: center;
+        gap: 30px;
+        & i {
+            cursor: pointer;
+            color: var(--gray);
+            width: 30px;
+            height: auto;
+            transition: 0.2s;
+            font-size: 2rem;
+            &:hover{
+                scale: 1.1;
+            }
+        }
     }
-    .padding-header {
-        padding: 5vw 0;
-    }
-    .plan-div {
-        width: 50vw;
-    }
-    .div-buttons {
-        flex-direction: column-reverse;
-    }
-    div .text-button{
-        font-size: 32px;
-        max-width: 65vw;
-    }
-    .plan-div:hover , .icon:hover{
-        scale: 1;
-    }
-}
-
-@media (max-width: 425px) {
-    .headset-img {
-        width: 90vw;
-        height: auto;
-        position: relative;
-        right: -0.8rem;
-    }
-    .faq-width {
-        width: 85vw;
-        justify-content: space-between;
-    }
-    .padding-header {
-        padding: 10vw 0;
-    }
-    .padding-footer {
-        padding: 10vw;
-    }
-    .plan-div {
-        width: 80vw;
-    }
-    .plan-width {
-        width: 53vw;
-        text-align: left;
-    }
-    .faq-width {
-        width: 85vw;
-        justify-content: space-between;
-    }
-    .gap-body {
-        gap: 80px;
-    }
-    .title {
-        font-size: 42px;
+    & p {
+        font-size: 1.1rem;
+        color: var(--gray);
     }
 }

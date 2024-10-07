@@ -24,7 +24,6 @@ body {
     background-color: var(--gray);
     scroll-behavior: smooth;
     margin-top: 75px;
-    font-size: 20px;
 }
 
 main {
@@ -83,6 +82,7 @@ header {
     align-items: center;
     justify-content: center;
     gap: 30px;
+    text-align: center;
     & h1 {
         color: var(--white);
         font-size: 2.2rem;
@@ -91,6 +91,8 @@ header {
         color: var(--white);
         font-weight: 200;
         font-size: 1.2rem;
+        text-align: center;
+        width: 90%;
     }
     & div {
         display: flex;
@@ -99,6 +101,7 @@ header {
         justify-content: center;
         gap: 10px;
         & p {
+            width: 100%;
             font-weight: bold;
         }
     }
@@ -192,6 +195,7 @@ button {
     flex-direction: column;
     gap: 30px;
     align-items: center;
+    justify-content: center;
     padding: 40px 10px;
     border-radius: 20px;
     transition: 0.1s;
@@ -199,6 +203,7 @@ button {
         background-color: #535353;
     }
     & .topicos {
+        text-align: center;
         display: flex;
         align-self: center;
         font-weight: 200;
@@ -211,11 +216,11 @@ button {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         gap: 5px;
         & h3 {
             display: flex;
-            font-size: 1.8rem;
+            font-size: 2rem;
             text-align: center;
         }
         & p {
@@ -295,6 +300,8 @@ button {
 }
 
 footer {
+    width: 100vw;
+    overflow: hidden;
     padding: 30px 0;
     display: flex;
     align-items: center;
@@ -326,5 +333,130 @@ footer {
     & p {
         font-size: 1.1rem;
         color: var(--gray);
+    }
+}
+
+
+@media (max-width: 1025px) {
+    header {
+        padding: 12px 30px;
+    }
+    body {
+        font-size: 17px;
+    }
+    header nav {
+        gap: 40px;
+    }
+    .sec-propaganda {
+        flex-direction: column-reverse;
+        & img {
+            width: 380px;
+        }
+        & .container {
+            width: 650px;
+            & p {
+                width: 90%;
+            }
+            & div {
+                align-self: center;
+            }
+        }
+    }
+    .div-planos {
+        flex-direction: column;
+    }
+    .div-faq {
+        width: 550px;
+    }
+}
+
+@media (max-width: 426px) {
+    * {
+        font-size: 14px;
+    }
+    main {
+        gap: 70px;
+    }
+    body {
+        font-size: 15px;
+    }
+    header {
+        padding: 12px 0;
+        flex-direction: column;
+        gap: 10px;
+        & nav {
+            scale: 0.9;
+            gap: 25px;
+            width: 100%;
+        }
+        & img {
+            height: 40px;
+            width: auto;
+        }
+    }
+    .sec-sobre {
+        & p {
+            font-size: 1.1rem;
+        }
+    }
+    .sec-propaganda {
+        & img {
+            width: 280px;
+        }
+        & .container {
+            width: 80vw;
+            & p {
+                width: 100%;
+            }
+            & button {
+                line-height: 16px;
+            }
+        }
+    }
+    .div-planos {
+        & .plano {
+            box-sizing: border-box;
+            width: 270px;
+            padding: 25px;
+        }  
+    }
+    .div-faq {
+        gap: 10px;
+        width: 80vw;
+        & p {
+            font-size: 0.9rem;
+        }
+        & .div-faqzinha {
+            & p {
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    footer {
+        & img {
+            height: 40px;
+            width: auto;
+        }
+        & div {
+            i {
+                width: auto;
+                font-size: 2rem;
+            }
+        }
+        & p {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+@media (max-width: 338px) {
+    header {
+        overflow: hidden;
+        & nav {
+            scale: 0.8;
+            gap: 30px;
+            width: 400px;
+        }
     }
 }

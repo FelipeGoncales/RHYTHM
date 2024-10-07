@@ -451,6 +451,9 @@ footer {
 }
 
 @media (max-width: 338px) {
+    body {
+        overflow: hidden;
+    }
     header {
         overflow: hidden;
         & nav {
